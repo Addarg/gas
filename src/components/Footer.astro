@@ -1,0 +1,51 @@
+---
+const today = new Date();
+import dextools from '/dextools.svg'
+import telegram from '/telegram.svg'
+import twitter from '/twitter.svg'
+
+---
+
+<footer>
+	<div class="footer">
+	&copy; {today.getFullYear()} $GAS IS A GASSINGLY TOXIC MEMECOIN WITH NO ESSENTIAL VALUE OR EXPECTATION OF FINANCIAL RETURN.
+	</div>
+	<div class="social-links">
+		<a href="https://www.dextools.io/app/en/ether/pair-explorer/0x" target="_blank">
+			<span class="sr-only">$GAS DEXTOOLS</span>
+			<img src={dextools} />
+		</a>
+		<a href="https://x.com/gascoineth" target="_blank">
+			<span class="sr-only">$GAS TWITTER/X</span>
+			<img src={twitter} />
+		</a>
+		<a href="https://t.me/" target="_blank">
+			<span class="sr-only">$GAS TELEGRAM</span>
+			<img src={telegram} />
+		</a>
+	</div>
+
+</footer>
+<style>
+	footer {
+		padding: 1em 1em 1em 1em;
+		/*background: linear-gradient(var(--gray-gradient)) no-repeat;
+		color: rgb(var(--gray));*/
+		background: black;
+		color: black;
+		text-align: center;
+	}
+	.social-links {
+		display: flex;
+		justify-content: center;
+		gap: 1em;
+		margin-top: 1em;
+	}
+	.social-links a {
+		text-decoration: none;
+		color: rgb(var(--gray));
+	}
+	.social-links a:hover {
+		color: rgb(var(--gray-dark));
+	}
+</style>

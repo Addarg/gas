@@ -1,0 +1,52 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Modal from '../components/Modal.astro';
+
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import { useGlobalAudioPlayer } from 'react-use-audio-player';
+
+function MyComponent() {
+  const { load } = useGlobalAudioPlayer();
+
+  // ... later in a callback, effect, etc.
+  load('/lol.wav', {
+    autoplay: true
+  });
+}
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		
+		<Header title={SITE_TITLE} />
+		<main>
+
+			
+
+			<h1 class="alo" >WELCOME TO $GAS</h1>
+			<div class="alo">
+			<img src="dollargas.gif" alt="GASLOGO" />
+			<p class="backgroundblack">
+				☠️☣️THE MOST TOXIC TICKER TO EVER EXIST!☣️☠️
+			</p>
+			</div>
+		<Footer />
+
+		<Modal id="dialog" open="Open modal">
+			<main slot="main">
+				<p>SOME MATRIX KINDA TEXT REALTED 2 $GAS</p>
+				<hr />
+				<img width="200" height="200" src="/xd.png" alt="Astro logo">
+			</main>
+			<button class="yesbtn" slot="yes">YES</button>
+			<button class="nobtn" slot="no">NO</button>
+		</Modal>
+
+	</body>
+</html>
